@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- From Uiverse.io by SelfMadeSystem -->
+    <div class="card-container">
+        <div class="card">
+            <div class="back">
+                <div class="red"></div>
+                <div class="text">UNO</div>
+            </div>
+            <div class="front">
+                <div class="red"></div>
+                <div class="text-center">
+                    <img src="HAHA.jpg" alt="Mono" style="width: 244px; height: 315px; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Solo girar una vez por interacción
+        function girarCarta(e) {
+            e.preventDefault(); // Evita doble disparo en móviles
+            document.querySelector('.card-container').classList.toggle('girar');
+        }
+
+        // Usar solo uno según el dispositivo
+        document.addEventListener('touchstart', girarCarta, { passive: false });
+        document.addEventListener('click', girarCarta);
+    </script>
+</body>
+
+
+</html>
+
